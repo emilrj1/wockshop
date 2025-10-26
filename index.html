@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wockshop — Wear the Quiet</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #0a0a0a; color: #e0e0e0; font-family: sans-serif; }
+    .page { display: none; }
+    .page.active { display: block; }
+    .fade-in { animation: fadeIn 1s ease; }
+    @keyframes fadeIn { from {opacity:0} to {opacity:1} }
+    .product-card:hover { background-color: #111; cursor: pointer; }
+    button { cursor: pointer; }
+  </style>
+</head>
+<body class="antialiased leading-relaxed">
+
+<header class="fixed w-full z-40 top-0 left-0 backdrop-blur-sm bg-black/30 border-b border-neutral-800">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><rect width='100%' height='100%' fill='%231b1b1b'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='%23ffffff'>W</text></svg>" alt="Wockshop logo" class="w-10 h-10 rounded-sm object-cover">
+      <span class="text-lg tracking-widest font-light">WOCKSHOP</span>
+    </div>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-neutral-400">
+      <a href="#" data-page="home" class="hover:text-white transition">Home</a>
+      <a href="#" data-page="shop" class="hover:text-white transition">Shop</a>
+      <a href="#" data-page="about" class="hover:text-white transition">About</a>
+      <a href="#" data-page="contact" class="hover:text-white transition">Contact</a>
+    </nav>
+    <button id="mobileMenuBtn" class="md:hidden text-neutral-400">Menu</button>
+  </div>
+</header>
+
+<main class="pt-24">
+  <!-- Home Section -->
+  <section id="home" class="page active fade-in">
+    <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+      <h2 class="text-5xl md:text-6xl font-extralight mb-4 tracking-tight">Wockshop</h2>
+      <p class="max-w-2xl mx-auto text-neutral-400 mb-8">Quiet cuts. Muted prints. Clothes for the lukewarm hours — melancholic, minimal, uncompromising.</p>
+      <div class="flex justify-center gap-4">
+        <button data-page="shop" class="px-6 py-3 border border-neutral-700 uppercase text-sm tracking-widest hover:bg-neutral-900 transition">Shop the Drop</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop Section -->
+  <section id="shop" class="page fade-in">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+      <h3 class="text-3xl font-light mb-8 text-center">Shop</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+        <!-- Product 1 -->
+        <div class="product-card bg-neutral-900 border border-neutral-800 rounded overflow-hidden flex flex-col">
+          <div class="aspect-[4/5] relative">
+            <img src="https://i.ibb.co/PZ8nbV9q/produkt-1.jpg" class="main-img w-full h-full object-cover">
+          </div>
+          <div class="flex gap-2 p-2">
+            <img src="https://i.ibb.co/PZ8nbV9q/produkt-1.jpg" class="thumb w-1/3 cursor-pointer border border-neutral-700 rounded">
+            <img src="https://i.ibb.co/cS5tf3GR/produkt-1-1.jpg" class="thumb w-1/3 cursor-pointer border border-neutral-700 rounded">
+          </div>
+          <div class="p-4 flex flex-col flex-grow">
+            <h5 class="font-medium text-lg">Muted</h5>
+            <p class="text-neutral-400 text-sm mt-2 flex-grow">A very cool tee...</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="font-semibold">$39.99</span>
+              <button onclick="window.open('https://buy.stripe.com/5kQ7sN6ace9Z9rP42H5Vu00','_blank')" class="px-3 py-1 border border-neutral-700 rounded text-sm hover:bg-neutral-800 transition">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card bg-neutral-900 border border-neutral-800 rounded overflow-hidden flex flex-col">
+          <div class="aspect-[4/5] relative">
+            <img src="https://i.ibb.co/p6Pvhjn1/produkt2.jpg" class="main-img w-full h-full object-cover">
+          </div>
+          <div class="flex gap-2 p-2">
+            <img src="https://i.ibb.co/p6Pvhjn1/produkt2.jpg" class="thumb w-1/3 cursor-pointer border border-neutral-700 rounded">
+            <img src="https://i.ibb.co/3m11WLJb/produkt2back.jpg" class="thumb w-1/3 cursor-pointer border border-neutral-700 rounded">
+          </div>
+          <div class="p-4 flex flex-col flex-grow">
+            <h5 class="font-medium text-lg">Real Love</h5>
+            <p class="text-neutral-400 text-sm mt-2 flex-grow">Do you what 𝔯𝔢𝔞𝔩 𝔩𝔬𝔳𝔢 is?</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="font-semibold">$89.99</span>
+              <button onclick="window.open('https://buy.stripe.com/3cIfZjfKM2rh1Zn6aP5Vu01','_blank')" class="px-3 py-1 border border-neutral-700 rounded text-sm hover:bg-neutral-800 transition">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="page fade-in">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+      <h3 class="text-2xl font-light mb-4">About</h3>
+      <p class="text-neutral-400 max-w-3xl">Wockshop crafts quiet wardrobe pieces — shirts and essentials that sit low in the day. We favour muted palettes, honest cuts and a melancholic mood. Nothing flashy. Just garments that hold space.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="page fade-in">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+      <h3 class="text-2xl font-light mb-4">Contact</h3>
+      <p class="text-neutral-400 mb-6">Questions, wholesale inquiries, or plain notes. We read slow but reply.</p>
+      <form action="mailto:wockstarshop777@gmail.com" method="post" enctype="text/plain" class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl">
+        <input name="name" placeholder="Your name" class="bg-neutral-900 border border-neutral-800 p-3 rounded" required>
+        <input name="email" placeholder="Email" class="bg-neutral-900 border border-neutral-800 p-3 rounded" required>
+        <textarea name="message" placeholder="Message" class="bg-neutral-900 border border-neutral-800 p-3 rounded md:col-span-2" rows="5" required></textarea>
+        <div class="md:col-span-2 flex items-center gap-4">
+          <button type="submit" class="px-5 py-3 border border-neutral-700 rounded text-sm uppercase tracking-widest hover:bg-neutral-800 transition">Send</button>
+          <p class="text-xs text-neutral-500">This will open your email client to send a message to us.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t border-neutral-800 mt-12 py-8 text-center text-neutral-500 text-sm">
+  <div class="max-w-6xl mx-auto px-6">© 2025 Wockshop — all rights reserved. <span class="block mt-2 text-xs">Made for quiet days.</span></div>
+</footer>
+
+<script>
+  // Page navigation
+  document.querySelectorAll('[data-page]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = btn.dataset.page;
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      const page = document.getElementById(target);
+      if (page) page.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // Product image thumbnails
+  document.querySelectorAll('.product-card').forEach(card => {
+    const mainImg = card.querySelector('.main-img');
+    card.querySelectorAll('.thumb').forEach(thumb => {
+      thumb.addEventListener('click', () => mainImg.src = thumb.src);
+    });
+  });
+</script>
+
+</body>
+</html>
