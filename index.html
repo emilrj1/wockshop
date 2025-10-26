@@ -182,6 +182,13 @@
     });
   });
 
+    // Mobile menu toggle
+  const mobileBtn = document.getElementById('mobileMenuBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  mobileBtn.addEventListener('click', () => {
+    mobileNav.classList.toggle('hidden');
+  });
+
   // Product image thumbnails
   document.querySelectorAll('.product-card').forEach(card => {
     const mainImg = card.querySelector('.main-img');
