@@ -21,7 +21,7 @@
 <header class="fixed w-full z-40 top-0 left-0 backdrop-blur-sm bg-black/30 border-b border-neutral-800">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 <div class="flex items-center gap-4">
-  <img src="https://i.ibb.co/FbQMxB1Z/Adobe-Express-file.png" alt="Wockshop logo" class="w-10 h-10 rounded-sm object-cover">
+  <img src="https://i.ibb.co/qYJ9kD1s/Adobe-Express-file-1.png" alt="Wockshop logo" class="w-10 h-10 rounded-sm object-cover">
   <span class="text-lg tracking-widest font-light">WOCKSHOP</span>
 </div>
     <nav class="hidden md:flex items-center gap-6 text-sm text-neutral-400">
@@ -30,8 +30,20 @@
       <a href="#" data-page="about" class="hover:text-white transition">About</a>
       <a href="#" data-page="contact" class="hover:text-white transition">Contact</a>
     </nav>
-    <button id="mobileMenuBtn" class="md:hidden text-neutral-400">Menu</button>
+    <!-- Mobile Menu Button -->
+    <button id="mobileMenuBtn" class="md:hidden text-neutral-400 border border-neutral-700 px-3 py-1 rounded hover:bg-neutral-800 transition">Menu</button>
   </div>
+
+  <!-- Mobile Nav -->
+  <nav id="mobileNav" class="mobile-nav hidden md:hidden bg-black/90 border-t border-neutral-800">
+    <div class="flex flex-col px-6 py-4 space-y-3 text-neutral-300 text-sm">
+      <a href="#" data-page="home" class="hover:text-white transition">Home</a>
+      <a href="#" data-page="shop" class="hover:text-white transition">Shop</a>
+      <a href="#" data-page="about" class="hover:text-white transition">About</a>
+      <a href="#" data-page="contact" class="hover:text-white transition">Contact</a>
+    </div>
+  </nav>
+</header>
 </header>
 
 <main class="pt-24">
