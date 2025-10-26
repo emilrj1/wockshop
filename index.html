@@ -111,6 +111,7 @@
   <input name="email" placeholder="Email" class="bg-neutral-900 border border-neutral-800 p-3 rounded" required>
   <textarea name="message" placeholder="Message" class="bg-neutral-900 border border-neutral-800 p-3 rounded md:col-span-2" rows="5" required></textarea>
   <div class="md:col-span-2 flex items-center gap-4">
+    <div class="g-recaptcha" data-sitekey="6LcSJvgrAAAAAPF53Oe9XNmYCnbNZTEl0Vz45aD0"></div>
     <button type="submit" class="px-5 py-3 border border-neutral-700 rounded text-sm uppercase tracking-widest hover:bg-neutral-800 transition">Send</button>
     <p class="text-xs text-neutral-500">Your message will be sent securely.</p>
   </div>
@@ -146,6 +147,6 @@
     });
   });
 </script>
-
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
